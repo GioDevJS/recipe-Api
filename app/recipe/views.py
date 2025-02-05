@@ -1,3 +1,9 @@
-from django.shortcuts import render
+"""
+Views for the recipe app.
+"""
+from rest_framework import viewsets
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
-# Create your views here.
+from core.models import Recipe
+from recipe import serializers
